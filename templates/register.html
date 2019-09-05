@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">        <!-- 全体を囲むコンテナ -->
+    <h1 class="my-3">登録</h1>
+
+    <form action="/registerpost" method="post">
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label text-md-right" for="name">馬名</label>
+          <div class="col-md-5">
+            <input type="text" class="form-control" id="id_name" name="name" value="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label text-md-right" for="comment">コメント</label>
+          <div class="col-md-9">
+            <textarea rows="5" class="form-control" name="comment" id="id_comment"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-right">
+            <button type="submit" class="btn btn-primary">登録</button>
+          </div>
+        </div>
+    </form>
+
+</div>        <!-- 全体を囲むコンテナ -->
+
+{% endblock %}
+

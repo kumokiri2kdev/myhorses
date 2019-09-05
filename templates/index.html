@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">        <!-- 全体を囲むコンテナ -->
+    <h1 class="my-3">俺の馬</h1>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr><th>馬名</th><th>コメント</th>
+    </thead>
+    <tbody>
+        {% for horse in horses %}
+        <tr><td>{{ horse.name }}</td><td>{{ horse.comment }}</td></tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+</div>        <!-- 全体を囲むコンテナ -->
+
+{% endblock %}
+
+</html>
